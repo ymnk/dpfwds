@@ -1,3 +1,23 @@
+What Is This
+============
 This program will work as the Socks proxy, 
 and forward proxy requests to the remote.
 It is just like the OpenSSH's ssh client with -D option.
+
+
+How To Try
+==========
+$ cd pdfwds
+$ sbt
+> update
+> compile
+> run com.jcraft.dpfwds.DPfwdSGUI
+
+The GUI will have four text fields,
+  * bind address
+  * socks port
+  * ssh destination: user@host
+  * ssh password
+
+Press "Connect" button, then config your web browser to
+use that socks proxy.

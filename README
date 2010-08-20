@@ -1,0 +1,3 @@
+This program will work as the Socks proxy, 
+and forward proxy requests to the remote.
+It is just like the OpenSSH's ssh client with -D option.

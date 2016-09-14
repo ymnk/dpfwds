@@ -111,6 +111,8 @@ class Socks5ProtocolHandler(
         readIPV4Address
       case 3 =>
         readNString
+      case 4 =>
+        readIPV6Address
     }
 
     val port = readShort

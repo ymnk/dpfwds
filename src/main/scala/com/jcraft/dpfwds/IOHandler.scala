@@ -68,6 +68,14 @@ trait IOHandler {
     InetAddress.getByAddress(tmp).getHostAddress
   }
 
+  // reading ipv6.address
+  protected def readIPV6Address: String = {
+    val i = read(buf, 0, 16)
+    val tmp = new Array[Byte](16)
+    System.arraycopy(buf, 0, tmp, 0, 16)
+    InetAddress.getByAddress(tmp).getHostAddress
+  }
+
   // reading string, which starts with its length
   protected def readNString: String = {
     val n = read
